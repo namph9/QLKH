@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 11, 2016, 9:43:28 PM
+    Author     : Huy_Nam
+*/
+
+.table th, .table td{
+    font-family: FontAwesome;
+    text-align: left;
+    font-size: 25px;
+}
+
+.value{
+    color: red;
+}
+/* edit header of listbox */
+.z-listheader {
+    background: -webkit-linear-gradient(top, #7CCAFF 0%, #7CCAFF 100%);
+    background: linear-gradient(to bottom, #7CCAFF 0%, #7CCAFF 100%);
+    color: white;
+}   
