@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="native">
+    <style src="/css/styles.css"/>
+    <div class="container" apply="com.namph.controller.LoginController">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <h:img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <h:p id="profile-name" class="profile-name-card"></h:p>
+            <h:form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <textbox id="id" sclass="form-control" placeholder="Tên đăng nhập" />
+                <textbox type="password" id="pass" sclass="form-control" placeholder="Mật khẩu" />
+                <button sclass="btn btn-lg btn-primary btn-block btn-signin" 
+                        label="Đăng nhập"
+                        id="btnLogin" />
+            </h:form><!-- /form -->
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+</zk>

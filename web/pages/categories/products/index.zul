@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml">
+    <div sclass="container-fluid" 
+         id="winProduct"
+         apply="com.namph.controller.ProductsController">
+        <div sclass="panel panel-default">
+            <div sclass="panel-heading">
+                <h:h3>Danh sách sản phẩm</h:h3>
+            </div>
+            <div sclass="panel-body">
+                <div sclass="z-button-action" >
+                    <button class="btn btn-primary" id="btnAddPro"
+                            iconSclass="z-icon-plus" label="Thêm mới">
+                    </button>
+                </div>
+                <separator bar="false"/>
+                <div sclass="table-responsive">
+                    <listbox id="tblProduct" mold="paging" pageSize="5"
+                             sclass="table table-striped table-bordered table-hover">
+                        <listhead>
+                            <listheader label="STT" sclass="col-xs-1" />
+                            <listheader label="Mã sản phẩm"/>
+                            <listheader label="Tên sản phẩm"/>
+                            <listheader label="Giá"/>
+                            <listheader label="Đơn vị"/>
+                            <listheader label="Loại sản phẩm"/>
+                            <listheader label=""/>
+                        </listhead>
+                    </listbox>
+                </div>
+            </div>
+        </div>
+    </div>
+</zk>

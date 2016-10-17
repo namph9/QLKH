@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:w="client"
+    xmlns:h="http://www.w3.org/1999/xhtml">
+    <window id="modalThu" border="normal" 
+            sclass="modal-dialog modal-md"
+            title="Phiếu thu tiền" 
+            apply="com.namph.controller.ModalThuController"
+            position="top,center" closable="true"
+            action="show: slideDown;hide: slideUp">
+        <div sclass="modal-content">
+            <div sclass="modal-body">
+                <div sclass="row">
+                    <div class="col-xs-12 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-user"></h:i>
+                                <h:font face="font-awesome" color="red"> Đại lý</h:font>
+                            </div>
+                            <selectbox id="selectAgent" sclass="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-road"></h:i>
+                                <h:font face="font-awesome" color="red">Địa chỉ</h:font>
+                            </div>
+                            <textbox id="txtAddress" sclass="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-usd"></h:i>
+                                <h:font face="font-awesome" color="red">Số tiền</h:font>
+                            </div>
+                            <doublebox  id="dbCurrency" sclass="form-control" format=",###.#" >
+                                <attribute w:name="doKeyPress_">
+                                    <![CDATA[
+                                            function(evt)
+                                            {
+                                                    if (!this._shallIgnore(evt, "0123456789,"))
+                                                            this.$doKeyPress_(evt);
+                                            }
+                                    ]]>
+                                </attribute>
+                            </doublebox >
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-usd"></h:i>
+                                <h:font face="font-awesome" color="red">Nội dung</h:font>
+                            </div>
+                            <textbox id="txtContent" sclass="form-control" rows="3" value="Thu tiền bán hàng"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div sclass="modal-footer">
+                <div sclass="z-button-action" >
+                    <button class="btn btn-success" 
+                            iconSclass="z-icon-save"
+                            label="Lưu"
+                            id="btnSave"/>
+                </div>
+            </div>
+        </div>
+    </window>
+</zk>

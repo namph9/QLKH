@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <div sclass="container-fluid"
+         apply="com.namph.controller.tonkho.TonKhoController"
+         id="winTonKho">
+        <div sclass="panel panel-default">
+            <div sclass="panel-heading">
+                Tồn kho
+            </div>
+            <div sclass="panel-body">
+                <div sclass="row">
+                    <div class="col-xs-2 form-group">
+                        <div sclass="z-button-action" >
+                            <button class="btn btn-primary"
+                                        id="btnRefresh"
+                                        iconSclass="z-icon-refresh">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <separator bar="false"/>
+                <div sclass="table-responsive">
+                    <listbox id="tblTonKho" mold="paging" pageSize="5"
+                             sclass="table table-striped table-bordered table-hover">
+                        <listhead>
+                            <listheader label="STT" sclass="col-sm-1" />
+                            <listheader label="Mã sản phẩm"/>
+                            <listheader label="Tên sản phẩm"/>
+                            <listheader label="Số lượng"/>
+                            <listheader label="Đơn vị"/>
+                        </listhead>
+                    </listbox>
+                </div>
+            </div>
+        </div>
+    </div>
+</zk>

@@ -1,0 +1,73 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 15, 2016, 10:41:45 PM
+    Author     : Administrator
+*/
+
+body {
+    font-family: arial;
+}
+
+listbox {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+listbox listitem {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+listbox listheader, listbox listcell {
+    padding: 10px;
+    text-align: center;
+}
+
+listbox listheader {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 600px) {
+
+    listbox {
+        border: 0;
+    }
+
+    listbox listhead {
+        display: none;
+    }
+
+    listbox listitem {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+
+    listbox listcell {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+    }
+
+    listbox listcell:last-child {
+        border-bottom: 0;
+    }
+
+    listbox listcell:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}

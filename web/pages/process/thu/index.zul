@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml">
+    <div sclass="container-fluid"
+         id="winMoney"
+         apply="com.namph.controller.ThuController">
+        <div sclass="panel panel-default">
+            <div sclass="panel-heading">
+                <h:h3>Chứng từ tiền mặt</h:h3>
+            </div>
+            <div sclass="panel-body">
+                <div sclass="form-inline">
+                    <div sclass="form-group" style="align: left">
+                        <div sclass="z-button-action" >
+                            <button class="btn btn-primary"
+                                    iconSclass="z-icon-plus" 
+                                    id="btnThu"
+                                    label="Thêm mới">
+                            </button>
+                        </div>
+                    </div>
+                    <div sclass="form-group" style="align: right">
+                        <div sclass="form-group">
+                            <datebox format="dd/MM/yyyy" id="from" onCreate="self.value = new Date()" />
+                        </div>
+                        <div sclass="form-group">
+                            <datebox  format="dd/MM/yyyy" id="to" onCreate="self.value = new Date()" />
+                        </div>
+                        <div sclass="form-group">
+                            <textbox placeholder="Mã khách hàng" id="txtAgentCode"/>
+                        </div>
+                        <div sclass="form-group" >
+                            <button class="btn btn-primary"
+                                    iconSclass="z-icon-search" 
+                                    id="btnSearch">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                    
+                <separator bar="false"/>
+                <div sclass="table-responsive">
+                    <listbox id="tblThu" mold="paging" pageSize="5"
+                             sclass="table table-striped table-bordered table-hover">
+                        <listhead>
+                            <listheader label="STT" sclass="col-sm-1"  />
+                            <listheader label="Ngày"  sclass="col-sm-2"/>
+                            <listheader label="Mã khách hàng" sclass="col-sm-1" />
+                            <listheader label="Tên khách hàng" sclass="col-sm-2" />
+                            <listheader label="Số tiền" sclass="col-sm-1"/>
+                            <listheader label="Nội dung"/>
+                        </listhead>
+                    </listbox>
+                </div>
+            </div>
+        </div>
+    </div>
+</zk>
+

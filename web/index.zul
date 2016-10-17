@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Load css-->
+<?link 
+    rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" ?>
+<?link 
+    rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" ?>
+<?link 
+    rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" ?>
+<?link 
+    rel="stylesheet" type="text/css"
+    href="resource/bower_components/metisMenu/dist/metisMenu.min.css" ?>
+<?link 
+    rel="stylesheet" type="text/css"
+    href="resource/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" ?>
+<?link 
+    rel="stylesheet" type="text/css"
+    href="resource/bower_components/datatables-responsive/css/dataTables.responsive.css" ?>
+<?link 
+    rel="stylesheet" type="text/css"
+    href="resource/dist/css/sb-admin-2.css" ?>
+<?link 
+    rel="stylesheet" type="text/css"
+    href="resource/mystyle/mystyle.css" ?>
+<?link 
+    rel="stylesheet" type="text/css"
+    href="resource/mystyle/hover.css" ?>
+<!--Load java script-->
+<?script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ?>
+<?script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js" ?>
+<?script src="resource/bower_components/jquery/dist/jquery.min.js" ?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+    <div apply="com.namph.controller.MainController">
+        <h:nav sclass="navbar navbar-default bg-inverse navbar-static-top" 
+               role="navigation" style="margin-bottom: 0">
+            <div sclass="navbar-header">
+                <h:button type="button" class="navbar-toggle" data-toggle="collapse" 
+                          data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </h:button>
+                <a iconSclass="fa fa-modx" sclass="navbar-brand" >Quản lý kho hàng</a>
+                <navbar mold="bs-pills" sclass="navbar-nav" id="mainMenu">
+                </navbar>
+            </div>
+        </h:nav>
+        <div zclass="center-body">
+            <include id="bodyLayout"/>
+            <div zclass="footer" align="center" >
+                <div zclass="footer-inner">
+                    <div zclass="footer-content">
+                        <label id="account"/>
+                    <label id="date"/>
+                    <timer id="timer" delay="1000" repeats="true" /> 
+                    
+                    <!--                        <label value="© Copyright"/>
+                    <label id="lbCurrentYear"/>
+                    <a href="http://google.com.vn" target="_blank" label="Phạm Huy Nam" sclass="bolder"/>
+                    <label value=", All rights reserved"/>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</zk>

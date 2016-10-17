@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml">
+    <style>
+        
+        .z-listheader {
+        background: -webkit-linear-gradient(top, #7CCAFF 0%, #7CCAFF 100%);
+        background: linear-gradient(to bottom, #7CCAFF 0%, #7CCAFF 100%);
+        color: white;
+        }    
+    </style>
+    <div sclass="container-fluid" 
+         id="winImport"
+         apply="com.namph.controller.ImportController">
+        <div sclass="col-xs-5">
+            <div sclass="panel panel-default">
+                <div sclass="panel-heading">
+                    <h:h3>Nhập hàng</h:h3>
+                </div>
+                <div sclass="panel-body">
+                    <div sclass="row">
+                        <div class="col-xs-2 form-group">
+                            <div sclass="z-button-action" >
+                                <button class="btn btn-primary"
+                                        id="btnAddImport"
+                                        iconSclass="z-icon-plus">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <div sclass="input-group ">
+                                <label id="" value="Từ ngày"/>
+                                <datebox id="from" format="dd/MM/yyyy"  onCreate="self.value = new Date()" />    
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <div sclass="input-group ">
+                                <label id="" value="Đến ngày"/>
+                                <datebox id="to" format="dd/MM/yyyy"  onCreate="self.value = new Date()" />    
+                            </div>
+                        </div>
+                        <div class="col-xs-1 form-group">
+                            <div sclass="z-button-action" >
+                                <button class="btn btn-primary"
+                                        id="btnSearch"
+                                        iconSclass="z-icon-search">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <separator bar="false"/>
+                    <div sclass="table-responsive">
+                        <listbox id="tblImportMaster" mold="paging" pageSize="10"
+                                 emptyMessage="Khong co du lieu"
+                                 sclass="table table-striped table-bordered table-hover table-responsive mylist">
+                            <listhead>
+                                <listheader label="STT" sclass="col-sm-1" />
+                                <listheader label="Ngày" sclass="col-xs-2"/>
+                                <listheader label="Số HD" sclass="col-xs-2" />
+                                <listheader label="Đối tác"/>
+                                <listheader label="Thành tiền" sclass="col-sm-3"/>
+                            </listhead>
+                        </listbox>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div sclass="col-xs-7">
+            <div sclass="panel panel-default">
+                <div sclass="panel-heading">
+                    <h:h3> Chi tiết</h:h3>
+                </div>
+                <div sclass="panel-body">
+                    <div sclass="table-responsive">
+                        <listbox id="tblImportDetail" mold="paging" pageSize="10"
+                                 emptyMessage="Khong co du lieu" 
+                                 sclass="table table-striped table-bordered table-hover table-responsive">
+                            <listhead>
+                                <listheader label="STT" sclass="col-sm-1" />
+                                <listheader label="Ma SP"/>
+                                <listheader label="Ten SP"/>
+                                <listheader label="Số lượng"/>
+                                <listheader label="Đơn vị"/>
+                                <listheader label="Đơn giá"/>
+                                <listheader label="Thành tiền"/>
+                            </listhead>
+                        </listbox>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</zk>

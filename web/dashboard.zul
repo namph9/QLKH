@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+    
+<!-- Bootstrap Core CSS -->
+<?link href="css/bootstrap.min.css" rel="stylesheet"?>
+
+<!-- Custom CSS -->
+<?link href="css/sb-admin.css" rel="stylesheet"?>
+
+<!-- Morris Charts CSS -->
+<?link href="css/plugins/morris.css" rel="stylesheet"?>
+
+<!-- Custom Fonts -->
+<?link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"?>
+    
+    
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="native">
+    <div id="" apply="com.namph.controller.DashboardController">
+
+        <h:div class="container-fluid">
+            <h:div class="row">
+                <h:div class="col-lg-3 col-md-6">
+                    <h:div class="panel panel-primary">
+                        <h:div class="panel-heading">
+                            <h:div class="row">
+                                <h:div class="col-xs-3">
+                                    <h:i class="fa fa-comments fa-5x"></h:i>
+                                </h:div>
+                                <h:div class="col-xs-9 text-right">
+                                    <h:div class="huge">
+                                        <label sclass="huge" id="totalDebit"/>
+                                    </h:div>
+                                    <h:div>VNĐ</h:div>
+                                </h:div>
+                            </h:div>
+                        </h:div>
+                        <h:a href="">
+                            <h:div class="panel-footer">
+                                <h:span class="pull-left">Công nợ</h:span>
+                                <h:span class="pull-right">
+                                    <h:i class="fa fa-arrow-circle-right"></h:i>
+                                </h:span>
+                                <h:div class="clearfix"></h:div>
+                            </h:div>
+                        </h:a>
+                    </h:div>
+                </h:div>   
+                
+                <h:div class="col-lg-3 col-md-6">
+                    <h:div class="panel panel-green">
+                        <h:div class="panel-heading">
+                            <h:div class="row">
+                                <h:div class="col-xs-3">
+                                    <h:i class="fa fa-tasks fa-5x"></h:i>
+                                </h:div>
+                                <h:div class="col-xs-9 text-right">
+                                    <h:div class="huge"> 
+                                        <label sclass="huge" id="totalToday"/>
+                                    </h:div>
+                                    <h:div>VNĐ</h:div>
+                                </h:div>
+                            </h:div>
+                        </h:div>
+                        <h:a href="">
+                            <h:div class="panel-footer">
+                                <h:span class="pull-left">Tiền bán hàng hôm nay</h:span>
+                                <h:span class="pull-right">
+                                    <h:i class="fa fa-arrow-circle-right"></h:i>
+                                </h:span>
+                                <h:div class="clearfix"></h:div>
+                            </h:div>
+                        </h:a>
+                    </h:div>
+                </h:div>
+                <h:div class="col-lg-3 col-md-6">
+                    <h:div class="panel panel-yellow">
+                        <h:div class="panel-heading">
+                            <h:div class="row">
+                                <h:div class="col-xs-3">
+                                    <h:i class="fa fa-shopping-cart fa-5x"></h:i>
+                                </h:div>
+                                <h:div class="col-xs-9 text-right">
+                                    <h:div class="huge">
+                                        <label sclass="huge" id="totalMonths"/>
+                                    </h:div>
+                                    <h:div>VNĐ</h:div>
+                                </h:div>
+                            </h:div>
+                        </h:div>
+                        <h:a href="#">
+                            <h:div class="panel-footer">
+                                <h:span class="pull-left">Tiền bán hàng trong tháng</h:span>
+                                <h:span class="pull-right">
+                                    <h:i class="fa fa-arrow-circle-right"></h:i>
+                                </h:span>
+                                <h:div class="clearfix"></h:div>
+                            </h:div>
+                        </h:a>
+                    </h:div>
+                </h:div>
+                <h:div class="col-lg-3 col-md-6">
+                    <h:div class="panel panel-red">
+                        <h:div class="panel-heading">
+                            <h:div class="row">
+                                <h:div class="col-xs-3">
+                                    <h:i class="fa fa-support fa-5x"></h:i>
+                                </h:div>
+                                <h:div class="col-xs-9 text-right">
+                                    <h:div class="huge">
+                                        <label sclass="huge" id="importMonths"/>
+                                    </h:div>
+                                    <h:div>VNĐ</h:div>
+                                </h:div>
+                            </h:div>
+                        </h:div>
+                        <h:a href="#">
+                            <h:div class="panel-footer">
+                                <h:span class="pull-left">Tiền nhập hàng trong tháng</h:span>
+                                <h:span class="pull-right">
+                                    <h:i class="fa fa-arrow-circle-right"></h:i>
+                                </h:span>
+                                <h:div class="clearfix"></h:div>
+                            </h:div>
+                        </h:a>
+                    </h:div>
+                </h:div>
+            </h:div>    
+        </h:div>    
+    </div>
+</zk>

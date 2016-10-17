@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window id="modalTonKho" border="normal" 
+            apply="com.namph.controller.tonkho.RefreshTonKho"
+            sclass="modal-dialog modal-sm"
+            title="Tính toán tồn kho đầu tháng" 
+            position="top,center" closable="true"
+            action="show: slideDown;hide: slideUp">
+        <div sclass="modal-body">
+                <datebox id="date" format="MM/yyyy"  onCreate="self.value = new Date()" />    
+        </div>
+        <div sclass="modal-footer">
+            <div sclass="z-button-action" >
+                <button class="btn btn-success" iconSclass="z-icon-check" id="btnRefresh"/>
+            </div>
+        </div>
+    </window>
+</zk>

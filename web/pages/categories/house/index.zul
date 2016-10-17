@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--adminmB1Hqpg Password:  aVCj3XxPHU79-->
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml">
+    <div sclass="container-fluid"
+         id="winKhoHang"
+         apply="com.namph.controller.KhoHangController">
+        <div sclass="panel panel-default">
+            <div sclass="panel-heading">
+                <h:h3>Kho hàng</h:h3>
+            </div>
+            <div sclass="panel-body">
+                <div sclass="z-button-action" >
+                    <button class="btn btn-primary"
+                            iconSclass="z-icon-plus" 
+                            label="Thêm mới">
+                    </button>
+                </div>
+                <separator bar="false"/>
+                <div sclass="table-responsive">
+                    <listbox id="tblHouse" mold="paging" pageSize="5"
+                             sclass="table table-striped table-bordered table-hover">
+                        <listhead>
+                            <listheader label="STT" sclass="col-sm-1" />
+                            <listheader label="Mã kho"/>
+                            <listheader label="Tên kho"/>
+                            <listheader label="Địa chỉ"/>
+                            <listheader label="Trạng thái"/>
+                            <listheader label="Hành động"/>
+                        </listhead>
+                    </listbox>
+                </div>
+            </div>
+        </div>
+    </div>
+</zk>

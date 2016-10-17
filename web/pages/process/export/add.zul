@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml">
+    <window id="modalExport" border="normal" 
+            apply="com.namph.controller.export.ModalExportController"
+            sclass="modal-dialog modal-lg"
+            title="Xuất hàng" 
+            position="top,center" closable="true"
+            action="show: slideDown;hide: slideUp">
+        <div sclass="modal-content">
+            <div sclass="modal-body">
+                <div sclass="row">
+                    <div class="col-xs-6 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-book"></h:i>
+                                <h:font face="font-awesome" color="red"> Số phiếu xuất</h:font>
+                            </div>
+                            <textbox id="txtSoHD" sclass="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-home"></h:i> 
+                                <h:font face="font-awesome" color="red">  Kho Hàng</h:font>
+                            </div>
+                            <selectbox id="selectKho" sclass="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-user"></h:i>  
+                                <h:font face="font-awesome" color="red"> Khách Hàng</h:font>
+                            </div>
+                            <combobox id="txtDoitac" sclass="form-control"/>
+                            <!--<textbox value="" id="txtDoitac" sclass="form-control"/>-->
+                        </div>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-road"></h:i>
+                                <h:font face="font-awesome"> Địa chỉ</h:font>
+                            </div>
+                            <textbox value="" id="txtAddress" sclass="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <div sclass="input-group ">
+                            <label id="" value="Ngày bán hàng"/>
+                            <datebox id="date_import" format="dd/MM/yyyy"  onCreate="self.value = new Date()" />    
+                        </div>
+                    </div>
+                </div>
+                
+                <div sclass="z-button-action" >
+                    <button class="btn btn-primary"
+                            label="Bán"
+                            id="btnAddRow"
+                            iconSclass="z-icon-plus">
+                    </button>
+                    <button class="btn btn-warning"
+                            id="btnAddRowKM"
+                            label="Khuyến mại"
+                            iconSclass="z-icon-plus">
+                    </button>
+                </div>
+                <separator bar="false"/>
+                <div sclass="table-responsive">
+                    <listbox id="tblExportDetail" width="" height=""
+                             onSelect="">
+                        <listhead>
+                            <listheader label="Loại sản phẩm" sclass="col-md-2" />
+                            <listheader label="Sản phẩm" sclass="col-md-2"/>
+                            <listheader label="Giá thành(VNĐ)"/>
+                            <listheader label="Số lượng"/>
+                            <listheader label="Đơn vị" sclass="col-xs-1"/>
+                            <listheader label="" sclass="col-xs-1"/>
+                        </listhead>
+                    </listbox>
+                </div>
+            </div>
+            
+            <div sclass="modal-footer">
+                <div class="col-xs-4 form-group">
+                    <hlayout>
+                        <h:h4>Thanh toán</h:h4>
+                        <radiogroup id="radioTT" sclass="form-control">
+                            <hlayout>
+                                <radio id="manualRadio" value="tm" label="Tiền mặt" selected="true"/>
+                                <radio id="automaticRadio" label="Công nợ" value="cn"/>
+                            </hlayout>
+                        </radiogroup>
+                        </hlayout>
+                </div>
+                <div class="col-xs-2 form-group">
+                </div>
+                <div class="col-xs-5 form-group">
+                    <div sclass="input-group ">
+                        <div class="input-group-addon">
+                            <h:i class="fa fa-usd"></h:i>
+                            <h:font face="font-awesome" color="red"> Tổng tiền</h:font>
+                        </div>
+                        <label id="total" sclass="form-control"/>
+                    </div>
+                </div>
+                <div class="col-xs-1 form-group">
+                    <div sclass="z-button-action" >
+                        <button class="btn btn-success" 
+                                label="Lưu"
+                                iconSclass="z-icon-save" id="btnSave"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </window> 
+    
+</zk>

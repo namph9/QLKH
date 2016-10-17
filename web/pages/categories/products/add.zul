@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml">
+    <window id="modalProduct" border="normal" 
+            sclass="modal-dialog modal-md"
+            title="Thêm mới sản phẩm" 
+            position="top,center" closable="true"
+            apply="com.namph.controller.product.AddProductController"
+            action="show: slideDown;hide: slideUp">
+        <div sclass="modal-content">
+            <div sclass="modal-body">
+                <div sclass="row">
+                    <div class="col-xs-12 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-rss"></h:i>
+                                <h:font face="font-awesome" color="red"> Loại sản phẩm</h:font>
+                            </div>
+                            <selectbox id="selectType" sclass="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-bars"></h:i>
+                                <h:font face="font-awesome" color="red">Mã sản phẩm</h:font>
+                            </div>
+                            <textbox id="txtCode" sclass="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-bars"></h:i>
+                                <h:font face="font-awesome" color="red">Tên sản phẩm</h:font>
+                            </div>
+                            <textbox id="txtName" sclass="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-usd"></h:i>
+                                <h:font face="font-awesome" color="red">Giá</h:font>
+                            </div>
+                            <textbox id="txtPrice" sclass="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <div sclass="input-group ">
+                            <div class="input-group-addon">
+                                <h:i class="fa fa-link"></h:i>
+                                <h:font face="font-awesome" color="red">Đơn vị</h:font>
+                            </div>
+                            <textbox id="txtUnit" sclass="form-control"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div sclass="modal-footer">
+                <div sclass="z-button-action" >
+                    <button class="btn btn-success" 
+                            iconSclass="z-icon-save"
+                            id="btnSave"/>
+                </div>
+            </div>
+        </div>
+    </window>
+</zk>
